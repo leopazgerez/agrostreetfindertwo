@@ -74,6 +74,7 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
     );
   }
 
+//  Metodo que retorna el boton que va a mostrar los botones ocultos.
   Widget _buildTapToClose() {
     return AnimatedBuilder(
       animation: _controller,
@@ -89,7 +90,7 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
               child: InkWell(
                 splashColor: _open ? Colors.redAccent : Colors.grey,
                 hoverColor: Colors.black,
-                highlightColor: Colors.black,
+                // highlightColor: Colors.black,
                 onTap: _onTap,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -109,6 +110,7 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
     );
   }
 
+//  Este metodo construye el boton que va a estar por debajo en el stack, pero por el momento decidi no usarlo
   Widget _buildTapToOpen() {
     return IgnorePointer(
         ignoring: _open,
@@ -153,6 +155,7 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
   }
 }
 
+// Creo una clase personalizada para los botones que van a mostrarse en el stack
 class AnimationButton extends StatelessWidget {
   const AnimationButton({Key? key, this.onPressed, required this.icon})
       : super(key: key);
@@ -173,6 +176,7 @@ class AnimationButton extends StatelessWidget {
   }
 }
 
+//
 class ExpandingButtonAction extends StatelessWidget {
   const ExpandingButtonAction(
       {Key? key,

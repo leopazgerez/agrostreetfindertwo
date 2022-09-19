@@ -12,10 +12,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Comenzando de Nuevo'),
+        title: Text('Home', style: Theme.of(context).textTheme.titleLarge),
       ),
       body: const Placeholder(),
-      floatingActionButton: const CustomExpandableButton(distance: 100, children: [
+      floatingActionButton: const CustomExpandableButton(distance: 112, children: [
         AnimationButton(icon: Icon(Icons.abc_rounded)),
         AnimationButton(icon: Icon(Icons.abc_rounded)),
         AnimationButton(icon: Icon(Icons.abc_rounded)),
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
     return Drawer(
       elevation: 8,
       width: 200,
-      backgroundColor: Colors.blue,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       child: Column(
         children: [
           const SizedBox(height: 80,),
@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
             color: Colors.black,
           ),
           const Divider(),
+          ExpansionTile(title: Text('data'), subtitle: Text('data'),)
         ],
       ),
     );
