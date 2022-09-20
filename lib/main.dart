@@ -1,4 +1,5 @@
 import 'package:agrostreetfindertwo/src/ui/pages/home_page.dart';
+import 'package:agrostreetfindertwo/src/ui/pages/load_field_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class AgroStreetFinderApp extends StatelessWidget {
         primaryColorDark: const Color(0xFF689F38),
         primaryColorLight: const Color(0xFFDCEDC8),
         primaryColor: const Color(0xFF8BC34A),
-        dividerColor: const Color(0xFFBDBDBD), 
+        dividerColor: const Color(0xFFBDBDBD),
         fontFamily: 'Montserrat',
         colorScheme: const ColorScheme(
             brightness: Brightness.light,
@@ -33,11 +34,12 @@ class AgroStreetFinderApp extends StatelessWidget {
             surface: Colors.white54,
             onSurface: Colors.white54
         ),
-        textTheme:const  TextTheme(
-          headline3: TextStyle(fontWeight: FontWeight.bold),
-        )
+        // textTheme:const  TextTheme(
+        //
+        //   headline3: TextStyle(fontWeight: FontWeight.bold),
+        // )
       ),
-      home: const HomePage(),
+      home: const LoadFieldPage(),
     );
   }
 
