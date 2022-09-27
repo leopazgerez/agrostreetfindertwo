@@ -29,10 +29,10 @@ class AgroStreetFinderApp extends StatelessWidget {
             onSecondary:  Colors.black,
             error:  Colors.red,
             onError: Colors.red,
-            background: Colors.white,
-            onBackground: Colors.white,
-            surface: Colors.white54,
-            onSurface: Colors.white54
+            background: Colors.grey,
+            onBackground: Colors.grey,
+            surface: Colors.grey,
+            onSurface: Colors.grey,
         ),
         // textTheme:const  TextTheme(
         //
