@@ -9,6 +9,14 @@ class LoadFieldPage extends StatefulWidget {
 
 class _LoadFieldPageState extends State<LoadFieldPage> {
   final _formKey = GlobalKey<FormState>();
+  final _productController = TextEditingController();
+
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +38,7 @@ class _LoadFieldPageState extends State<LoadFieldPage> {
           child: Column(
             children: <Widget> [
               TextFormField(
+                controller: _productController,
                 textCapitalization: TextCapitalization.sentences,
                 style: Theme.of(context).textTheme.bodyMedium,
                 decoration: InputDecoration(
@@ -48,6 +57,7 @@ class _LoadFieldPageState extends State<LoadFieldPage> {
                   return null;
                 },
               ),
+              Text('${_productController.text}')
             ],
           ),
         ));

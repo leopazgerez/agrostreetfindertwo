@@ -39,7 +39,7 @@ class AgroStreetFinderApp extends StatelessWidget {
         //   headline3: TextStyle(fontWeight: FontWeight.bold),
         // )
       ),
-      home: const HomePage(),
+      home: const LoadFieldPage(),
     );
   }
 

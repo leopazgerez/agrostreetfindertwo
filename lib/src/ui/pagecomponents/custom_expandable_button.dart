@@ -154,7 +154,6 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
     return children;
   }
 }
-
 // Creo una clase personalizada para los botones que van a mostrarse en el stack
 class AnimationButton extends StatelessWidget {
   const AnimationButton({Key? key, this.onPressed, required this.icon})
@@ -176,7 +175,6 @@ class AnimationButton extends StatelessWidget {
   }
 }
 
-//
 class ExpandingButtonAction extends StatelessWidget {
   const ExpandingButtonAction(
       {Key? key,
@@ -196,7 +194,7 @@ class ExpandingButtonAction extends StatelessWidget {
       animation: progress,
       builder: (context, child) {
         final offset = Offset.fromDirection(
-          directionInDegrees * (math.pi / 180.0),
+          directionInDegrees * (math.pi / 320.0),
           progress.value * maxDistance,
         );
         return Positioned(

@@ -1,25 +1,35 @@
 import 'package:agrostreetfindertwo/src/ui/pagecomponents/custom_expandable_button.dart';
+import 'package:agrostreetfindertwo/src/ui/pagecontrollers/home_page_controllers.dart';
 import 'package:flutter/material.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends StateMVC<HomePage> {
+
+  final HomePageController _con = HomePageController.con;
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Home', style: Theme.of(context).textTheme.titleLarge),
       ),
       body: const Placeholder(),
-      floatingActionButton: const CustomExpandableButton(distance: 112, children: [
-        AnimationButton(icon: Icon(Icons.abc_rounded)),
-        AnimationButton(icon: Icon(Icons.abc_rounded)),
-        AnimationButton(icon: Icon(Icons.abc_rounded)),
-        AnimationButton(icon: Icon(Icons.abc_rounded)),
+      floatingActionButton: CustomExpandableButton(distance: 70, children: [
+        AnimationButton(
+          icon: const Icon(Icons.route_outlined),
+          onPressed: () => _con.goToLoadFieldPage(context),
+        ),
+        AnimationButton(
+          icon: const Icon(Icons.place_outlined),
+          onPressed: () => _con.goToLoadPointPage(context) ,
+       ),
       ],),
       drawer: _drawer(),
     );
