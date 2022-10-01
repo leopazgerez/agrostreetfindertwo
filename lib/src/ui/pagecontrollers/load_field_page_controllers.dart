@@ -11,4 +11,8 @@ class LoadFieldPageController extends ControllerMVC {
     if (_this == null) _this = LoadFieldPageController._();
     return _this;
   }
+
+  void saveField(){}
+  void onPressedCancel(){}
+  void backToHomePage(){}
 }

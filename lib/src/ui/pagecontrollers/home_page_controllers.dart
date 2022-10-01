@@ -15,6 +15,12 @@ class HomePageController extends ControllerMVC {
     return _this;
   }
 
+//   CONSULTAR
+   Widget drawerController(Widget child, DrawerAlignment alignment){
+    return DrawerController(alignment: alignment,
+    child: child,);
+   }
+
    void goToLoadFieldPage(context) {
     Navigator.push(
       context,
