@@ -154,6 +154,7 @@ class _CustomExpandableButtonState extends State<CustomExpandableButton>
     return children;
   }
 }
+
 // Creo una clase personalizada para los botones que van a mostrarse en el stack
 class AnimationButton extends StatelessWidget {
   const AnimationButton({Key? key, this.onPressed, required this.icon})
