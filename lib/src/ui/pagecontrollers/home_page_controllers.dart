@@ -2,7 +2,7 @@ import 'package:agrostreetfindertwo/src/ui/pages/load_field_page.dart';
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
-import '../pages/load_point_page.dart';
+import '../pages/load_track_page.dart';
 
 class HomePageController extends ControllerMVC {
   HomePageController._();
@@ -27,7 +27,7 @@ class HomePageController extends ControllerMVC {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const LoadPointPage(),
+          builder: (context) => const LoadTrackPage(),
         )
     );
   }

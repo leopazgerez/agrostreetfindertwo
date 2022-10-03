@@ -1,5 +1,6 @@
 import 'package:agrostreetfindertwo/src/ui/pages/home_page.dart';
 import 'package:agrostreetfindertwo/src/ui/pages/load_field_page.dart';
+import 'package:agrostreetfindertwo/src/ui/pages/load_track_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,7 +40,7 @@ class AgroStreetFinderApp extends StatelessWidget {
         //   headline3: TextStyle(fontWeight: FontWeight.bold),
         // )
       ),
-      home: const LoadFieldPage(),
+      home: const HomePage(),
     );
   }
 
